@@ -1,6 +1,6 @@
 use std::env;
 
-use ni_rs::{get_install_command, get_package_manager};
+use ni::{get_install_command, get_package_manager};
 
 fn main() -> Result<(), std::io::Error> {
     let current_dir = env::current_dir()?;
