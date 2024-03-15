@@ -9,3 +9,10 @@ version = "0.1.0"
 [[package]]
 name = "ni"
 version = "0.1.0"
+dependencies = [
+ "package-managers",
+]
+
+[[package]]
+name = "package-managers"
+version = "0.1.0"

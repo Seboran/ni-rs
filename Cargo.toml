@@ -2,5 +2,8 @@
 
 members = [
     "ni",
-    "na"
+    "na",
+    "package-managers"
 ]
+
+resolver = "2"
