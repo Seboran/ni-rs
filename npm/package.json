@@ -3,6 +3,9 @@
   "version": "0.0.3",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "url": "https://github.com/Seboran/ni-rs"
+  },
   "files": [
     "dist",
     "bin"
