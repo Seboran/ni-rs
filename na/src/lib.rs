@@ -8,6 +8,7 @@ pub fn get_add_command(
         PackageManager::Npm => "npm",
         PackageManager::Pnpm => "pnpm",
         PackageManager::Bun => "bun",
+        PackageManager::Yarn => "yarn",
     }
     .to_string();
 
@@ -16,6 +17,7 @@ pub fn get_add_command(
         PackageManager::Npm => args_command.push(String::from("i")),
         PackageManager::Pnpm => args_command.push(String::from("add")),
         PackageManager::Bun => args_command.push(String::from("add")),
+        PackageManager::Yarn => args_command.push(String::from("add")),
     };
 
     args_command.append(args);

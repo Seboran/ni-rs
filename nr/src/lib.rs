@@ -10,6 +10,7 @@ pub fn get_run_command(
         package_managers::PackageManager::Npm => npm::run_npm(args),
         package_managers::PackageManager::Pnpm => run_script("pnpm", args),
         package_managers::PackageManager::Bun => run_script("bun", args),
+        package_managers::PackageManager::Yarn => run_script("yarn", args),
     }
 }
 

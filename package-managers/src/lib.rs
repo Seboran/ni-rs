@@ -5,6 +5,7 @@ pub enum PackageManager {
     Npm,
     Pnpm,
     Bun,
+    Yarn,
 }
 
 pub struct CommandAndArguments {
@@ -23,6 +24,7 @@ pub fn get_package_manager_command(pm: PackageManager) -> &'static str {
         PackageManager::Npm => "npm",
         PackageManager::Pnpm => "pnpm",
         PackageManager::Bun => "bun",
+        PackageManager::Yarn => "yarn",
     }
 }
 
@@ -40,6 +42,11 @@ pub fn get_package_manager(current_dir: &PathBuf) -> PackageManager {
     let package_lock = current_dir.join("package-lock.json");
     if let Ok(true) = package_lock.try_exists() {
         return PackageManager::Npm;
+    }
+
+    let yarn_lock = current_dir.join("yarn.lock");
+    if let Ok(true) = yarn_lock.try_exists() {
+        return PackageManager::Yarn;
     }
 
     unimplemented!("Unknown package manager...")
