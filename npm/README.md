@@ -17,6 +17,7 @@ Examples
 ```sh
 ni
 # npm i
+# yarn install
 # pnpm i
 # bun i
 ```
@@ -28,11 +29,20 @@ ni -D vite
 # bun add -D vite
 ```
 
+```sh
+ni -g nodemon
+# npm i -g nodemon
+# yarn global add nodemon
+# pnpm add -g nodemon
+# bun add -g nodemon
+```
+
 ### Run script
 
 ```sh
 nr my_script
 # npm run my_script
+# yarn my_script
 # pnpm my_script
 # bun my_script
 ```
