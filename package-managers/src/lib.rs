@@ -4,6 +4,7 @@ use std::{path::PathBuf, process::Command};
 pub enum PackageManager {
     Npm,
     Pnpm,
+    Bun,
 }
 
 pub struct CommandAndArguments {
@@ -19,10 +20,21 @@ impl CommandAndArguments {
 
 pub fn get_package_manager(current_dir: &PathBuf) -> PackageManager {
     let pnpm_lock = current_dir.join("pnpm-lock.yaml");
-    match pnpm_lock.try_exists() {
-        Ok(true) => PackageManager::Pnpm,
-        _ => PackageManager::Npm,
+    if let Ok(true) = pnpm_lock.try_exists() {
+        return PackageManager::Pnpm;
     }
+
+    let bun_lockb = current_dir.join("bun.lockb");
+    if let Ok(true) = bun_lockb.try_exists() {
+        return PackageManager::Bun;
+    }
+
+    let package_lock = current_dir.join("package-lock.json");
+    if let Ok(true) = package_lock.try_exists() {
+        return PackageManager::Npm;
+    }
+
+    unimplemented!("Unknown package manager...")
 }
 
 #[cfg(test)]

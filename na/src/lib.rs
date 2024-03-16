@@ -7,6 +7,7 @@ pub fn get_add_command(
     let program = match package_manager {
         PackageManager::Npm => "npm",
         PackageManager::Pnpm => "pnpm",
+        PackageManager::Bun => "bun",
     }
     .to_string();
 
@@ -14,6 +15,7 @@ pub fn get_add_command(
     match package_manager {
         PackageManager::Npm => args_command.push(String::from("i")),
         PackageManager::Pnpm => args_command.push(String::from("add")),
+        PackageManager::Bun => args_command.push(String::from("add")),
     };
 
     args_command.append(args);
