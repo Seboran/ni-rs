@@ -18,6 +18,14 @@ impl CommandAndArguments {
     }
 }
 
+pub fn get_package_manager_command(pm: PackageManager) -> &'static str {
+    match pm {
+        PackageManager::Npm => "npm",
+        PackageManager::Pnpm => "pnpm",
+        PackageManager::Bun => "bun",
+    }
+}
+
 pub fn get_package_manager(current_dir: &PathBuf) -> PackageManager {
     let pnpm_lock = current_dir.join("pnpm-lock.yaml");
     if let Ok(true) = pnpm_lock.try_exists() {

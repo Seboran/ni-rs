@@ -1,18 +1,23 @@
-use package_managers::{CommandAndArguments, PackageManager};
+use package_managers::{get_package_manager_command, CommandAndArguments, PackageManager};
 
-pub fn get_install_command(package_manager: PackageManager) -> CommandAndArguments {
-    match package_manager {
-        PackageManager::Npm => CommandAndArguments {
-            program: String::from("npm"),
-            args: vec![String::from("install")],
-        },
-        PackageManager::Pnpm => CommandAndArguments {
-            program: String::from("pnpm"),
-            args: vec![String::from("install")],
-        },
-        PackageManager::Bun => CommandAndArguments {
-            program: String::from("bun"),
-            args: vec![String::from("i")],
-        },
+pub fn get_install_command(
+    package_manager: PackageManager,
+    args: &mut Vec<String>,
+) -> CommandAndArguments {
+    let mut args_command = vec![];
+    let install_command = match package_manager {
+        PackageManager::Bun => "i",
+        PackageManager::Npm => "install",
+        PackageManager::Pnpm => "i",
+    };
+
+    args_command.push(String::from(install_command));
+    args_command.append(args);
+
+    let program = String::from(get_package_manager_command(package_manager));
+
+    CommandAndArguments {
+        program,
+        args: args_command,
     }
 }
