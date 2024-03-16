@@ -1,4 +1,7 @@
-use package_managers::{get_package_manager_command, CommandAndArguments, PackageManager};
+use package_managers::{
+    get_package_manager_command, insert_global_at_first_position, CommandAndArguments,
+    PackageManager,
+};
 
 pub fn get_install_command(
     package_manager: PackageManager,
@@ -37,16 +40,9 @@ fn push_add_command(
     original_args: &mut Vec<String>,
 ) {
     if package_manager.eq(&PackageManager::Yarn) {
-        replace_global_yarn_install(args_command, original_args);
+        insert_global_at_first_position(args_command, original_args);
     }
     add_command(package_manager, args_command);
-}
-
-fn replace_global_yarn_install(args_command: &mut Vec<String>, original_args: &mut Vec<String>) {
-    if let Some(n) = original_args.iter().position(|r| r.eq("-g")) {
-        original_args.remove(n);
-        args_command.push(String::from("global"));
-    }
 }
 
 fn add_command(package_manager: &PackageManager, args_command: &mut Vec<String>) {

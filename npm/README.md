@@ -46,3 +46,21 @@ nr my_script
 # pnpm my_script
 # bun my_script
 ```
+
+### Remove package
+
+```sh
+nrm vite
+# npm rm vite
+# yarn remove vite
+# pnpm rm vite
+# bun rm vite
+```
+
+```sh
+nrm -g vite
+# npm rm -g vite
+# yarn global remove vite
+# pnpm rm -g vite
+# bun rm -g vite
+```

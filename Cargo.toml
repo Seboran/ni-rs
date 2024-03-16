@@ -4,6 +4,7 @@ members = [
     "ni",
     "na",
     "nr",
+    "nrm",
     "package-managers"
 ]
 

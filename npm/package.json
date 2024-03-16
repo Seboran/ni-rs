@@ -13,7 +13,8 @@
   "bin": {
     "ni": "bin/ni.js",
     "na": "bin/na.js",
-    "nr": "bin/nr.js"
+    "nr": "bin/nr.js",
+    "nrm": "bin/nrm.js"
   },
   "devDependencies": {
     "bun-types": "latest",

@@ -52,6 +52,16 @@ pub fn get_package_manager(current_dir: &PathBuf) -> PackageManager {
     unimplemented!("Unknown package manager...")
 }
 
+pub fn insert_global_at_first_position(
+    args_command: &mut Vec<String>,
+    original_args: &mut Vec<String>,
+) {
+    if let Some(n) = original_args.iter().position(|r| r.eq("-g")) {
+        original_args.remove(n);
+        args_command.insert(0, String::from("global"));
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
