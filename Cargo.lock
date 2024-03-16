@@ -19,6 +19,9 @@ dependencies = [
 [[package]]
 name = "nr"
 version = "0.1.0"
+dependencies = [
+ "package-managers",
+]
 
 [[package]]
 name = "package-managers"
