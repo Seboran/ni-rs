@@ -12,8 +12,6 @@ npm i -g @seboran/ni
 
 ### Install package
 
-Examples
-
 ```sh
 ni
 # npm i
@@ -35,6 +33,16 @@ ni -g nodemon
 # yarn global add nodemon
 # pnpm add -g nodemon
 # bun add -g nodemon
+```
+
+### Alias
+
+```sh
+na
+# npm
+# yarn
+# pnpm
+# bun
 ```
 
 ### Run script
