@@ -12,7 +12,8 @@
   ],
   "bin": {
     "ni": "bin/ni.js",
-    "na": "bin/na.js"
+    "na": "bin/na.js",
+    "nr": "bin/nr.js"
   },
   "devDependencies": {
     "bun-types": "latest",
