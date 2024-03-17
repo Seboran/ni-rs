@@ -11,10 +11,10 @@
     "npm/bin"
   ],
   "bin": {
-    "ni": "npm/bin/ni.js",
-    "na": "npm/bin/na.js",
-    "nr": "npm/bin/nr.js",
-    "nrm": "npm/bin/nrm.js"
+    "ni": "npm/bin/ni",
+    "na": "npm/bin/na",
+    "nr": "npm/bin/nr",
+    "nrm": "npm/bin/nrm"
   },
   "scripts": {
     "compile": "cargo build --workspace --bins -r && cp target/release/na target/release/ni target/release/nr target/release/nrm npm/dist",
