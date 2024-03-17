@@ -9,10 +9,10 @@
     "bin"
   ],
   "bin": {
-    "ni": "bin/ni",
-    "na": "bin/na",
-    "nr": "bin/nr",
-    "nrm": "bin/nrm"
+    "ni": "bin/ni.js",
+    "na": "bin/na.js",
+    "nr": "bin/nr.js",
+    "nrm": "bin/nrm.js"
   },
   "devDependencies": {
     "bun-types": "latest",
