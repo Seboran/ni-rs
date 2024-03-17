@@ -7,7 +7,7 @@ This project is like <https://github.com/antfu/ni> but in rust, because why not?
 ## Install
 
 ```sh
-bun add -g @seboran/ni
+pnpm add -g @seboran/ni
 ```
 
 ## Features
