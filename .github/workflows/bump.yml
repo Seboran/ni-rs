@@ -3,10 +3,6 @@ on:
   push:
     branches:
       - main
-  workflow_run:
-    workflows: [Rust and Node]
-    types:
-      - completed
 jobs:
   build:
     runs-on: ubuntu-latest
