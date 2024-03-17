@@ -1,7 +1,7 @@
 {
   "name": "@seboran/ni",
   "type": "module",
-  "version": "0.2.9",
+  "version": "0.4.12",
   "license": "MIT",
   "repository": {
     "url": "git+https://github.com/Seboran/ni-rs.git"
@@ -17,7 +17,6 @@
     "nrm": "npm/bin/nrm"
   },
   "scripts": {
-    "prepublishOnly": "npm version from-git --no-git-tag-version",
     "init:dist": "mkdir npm/dist/linux && mkdir npm/dist/windows && mkdir npm/dist/apple",
     "compile": "./cross-build.sh",
     "cp:build:linux": "cp target/x86_64-unknown-linux-gnu/release/na target/x86_64-unknown-linux-gnu/release/ni target/x86_64-unknown-linux-gnu/release/nr target/x86_64-unknown-linux-gnu/release/nrm npm/dist/linux",
