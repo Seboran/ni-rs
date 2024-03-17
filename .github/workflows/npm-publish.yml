@@ -16,9 +16,6 @@ jobs:
       - uses: oven-sh/setup-bun@v1
       - run: bun i
       - run: cargo test --verbose
-      - name: Build cargo
-        run: cargo build --verbose
-      - run: bun compile
 
   publish-npm:
     needs: build
@@ -29,6 +26,9 @@ jobs:
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
+      - name: Build cargo
+        run: cargo build --verbose
+      - run: bun compile
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
