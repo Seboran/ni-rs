@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm version from-git
+      - run: npm version ${{ steps.tag_version.outputs.new_tag }}
       - name: Create a GitHub release
         uses: ncipollo/release-action@v1
         with:
