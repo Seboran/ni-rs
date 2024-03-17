@@ -30,6 +30,7 @@ jobs:
       - run: bun i
       - run: mkdir npm/dist
       - run: bun compile
+      - run: npm version from-git --no-git-tag-version
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
