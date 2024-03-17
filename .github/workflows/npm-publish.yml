@@ -26,8 +26,8 @@ jobs:
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
-      - name: Build cargo
-        run: cargo build --verbose
+      - uses: oven-sh/setup-bun@v1
+      - run: bun i
       - run: bun compile
       - run: npm publish
         env:
