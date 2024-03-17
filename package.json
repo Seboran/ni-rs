@@ -18,6 +18,7 @@
     "nrm": "npm/bin/nrm"
   },
   "scripts": {
+    "prepublishOnly": "npm version from-git --no-git-tag-version",
     "init:dist": "mkdir npm/dist/linux && mkdir npm/dist/windows && mkdir npm/dist/apple",
     "compile": "./cross-build.sh",
     "cp:build:linux": "cp target/x86_64-unknown-linux-gnu/release/na target/x86_64-unknown-linux-gnu/release/ni target/x86_64-unknown-linux-gnu/release/nr target/x86_64-unknown-linux-gnu/release/nrm npm/dist/linux",
