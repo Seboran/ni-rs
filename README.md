@@ -1,13 +1,15 @@
 # @seboran/ni
 
-This project is a cli to handle multiple package managers. One could say it's a package managers' manager. Works with bun, yarn, npm and pnpm!
+This project is a cli to handle multiple package managers. One could say it's a package managers' manager. Works* with bun, yarn, npm and pnpm!
 
 This project is like <https://github.com/antfu/ni> but in rust, because why not?
+
+*At the moment, it only works with bun as the global package manager...
 
 ## Install
 
 ```sh
-npm i -g @seboran/ni
+bun add -g @seboran/ni
 ```
 
 ## Features
@@ -15,7 +17,7 @@ npm i -g @seboran/ni
 ### Install package
 
 ```sh
-ni
+bun ni
 # npm i
 # yarn install
 # pnpm i
@@ -23,14 +25,14 @@ ni
 ```
 
 ```sh
-ni -D vite
+bun ni -D vite
 # npm i -D vite
 # pnpm add -D vite
 # bun add -D vite
 ```
 
 ```sh
-ni -g nodemon
+bun ni -g nodemon
 # npm i -g nodemon
 # yarn global add nodemon
 # pnpm add -g nodemon
@@ -40,7 +42,7 @@ ni -g nodemon
 ### Alias
 
 ```sh
-na
+bun na
 # npm
 # yarn
 # pnpm
@@ -50,7 +52,7 @@ na
 ### Run script
 
 ```sh
-nr my_script
+bun nr my_script
 # npm run my_script
 # yarn my_script
 # pnpm my_script
@@ -60,7 +62,7 @@ nr my_script
 ### Remove package
 
 ```sh
-nrm vite
+bun nrm vite
 # npm rm vite
 # yarn remove vite
 # pnpm rm vite
@@ -68,7 +70,7 @@ nrm vite
 ```
 
 ```sh
-nrm -g vite
+bun nrm -g vite
 # npm rm -g vite
 # yarn global remove vite
 # pnpm rm -g vite
