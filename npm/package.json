@@ -15,7 +15,6 @@
     "nrm": "bin/nrm.js"
   },
   "devDependencies": {
-    "bun-types": "latest",
     "prettier": "^3.2.5"
   },
   "peerDependencies": {

@@ -15,10 +15,8 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "allowJs": true,
-    "types": [
-      "bun-types" // add Bun global
-    ],
-    "checkJs": true
+    "checkJs": true,
+    "types": ["node"]
   },
   "exclude": ["out", "dist"]
 }
