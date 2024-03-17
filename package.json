@@ -18,8 +18,7 @@
   },
   "scripts": {
     "compile": "cargo build --workspace --bins -r && cp target/release/na target/release/ni target/release/nr target/release/nrm npm/dist",
-    "link:local": "cd npm && bun link",
-    "prepublishOnly": "npm version patch --no-package-lock"
+    "link:local": "cd npm && bun link"
   },
   "devDependencies": {
     "bun-types": "latest"
