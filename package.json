@@ -6,7 +6,7 @@
   "repository": {
     "url": "https://github.com/Seboran/ni-rs"
   },
-  "packageManager": "^pnpm@8.0.0",
+  "packageManager": "pnpm@^8.0.0",
   "files": [
     "npm/dist",
     "npm/bin"
