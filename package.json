@@ -4,7 +4,7 @@
   "version": "0.2.9",
   "license": "MIT",
   "repository": {
-    "url": "https://github.com/Seboran/ni-rs"
+    "url": "git+https://github.com/Seboran/ni-rs.git"
   },
   "packageManager": "pnpm@^8.0.0",
   "files": [
