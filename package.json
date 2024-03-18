@@ -22,7 +22,7 @@
     "cp:build:linux": "cp target/x86_64-unknown-linux-gnu/release/na target/x86_64-unknown-linux-gnu/release/ni target/x86_64-unknown-linux-gnu/release/nr target/x86_64-unknown-linux-gnu/release/nrm npm/dist/linux",
     "cp:build:apple": "cp target/aarch64-apple-darwin/release/na target/aarch64-apple-darwin/release/ni target/aarch64-apple-darwin/release/nr target/aarch64-apple-darwin/release/nrm npm/dist/apple",
     "cp:build:windows": "cp target/x86_64-pc-windows-gnu/release/na.exe target/x86_64-pc-windows-gnu/release/ni.exe target/x86_64-pc-windows-gnu/release/nr.exe target/x86_64-pc-windows-gnu/release/nrm.exe npm/dist/windows",
-    "cp:build": "pnpm cp:build:linux && pnpm cp:build:windows",
+    "cp:build": "pnpm cp:build:linux && pnpm cp:build:windows && pnpm cp:build:apple",
     "build": "pnpm compile && pnpm cp:build",
     "link:local": "cd npm && bun link",
     "compile:old": "cargo build --workspace --bins -r && cp target/release/na target/release/ni target/release/nr target/release/nrm npm/dist"
