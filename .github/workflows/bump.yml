@@ -1,24 +1,24 @@
-name: Bump version
 on:
   push:
     branches:
       - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+name: release-please
+
 jobs:
-  build:
+  release-please:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Bump version and push tag
-        id: tag_version
-        uses: mathieudutour/github-tag-action@v6.2
+      - uses: google-github-actions/release-please-action@v4
         with:
-          github_token: ${{ secrets.WORKFLOW_TOKEN }}
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - name: Create a GitHub release
-        uses: ncipollo/release-action@v1
-        with:
-          tag: ${{ steps.tag_version.outputs.new_tag }}
-          name: Release ${{ steps.tag_version.outputs.new_tag }}
-          body: ${{ steps.tag_version.outputs.changelog }}
+          # this assumes that you have created a personal access token
+          # (PAT) and configured it as a GitHub action secret named
+          # `MY_RELEASE_PLEASE_TOKEN` (this secret name is not important).
+          token: ${{ secrets.WORKFLOW_TOKEN }}
+          # this is a built-in strategy in release-please, see "Action Inputs"
+          # for more options
+          release-type: simple
