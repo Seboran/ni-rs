@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    "${parent_path}/../dist/linux/nr" "$@" 
-elif [[ "$OSTYPE" == "darwin"* ]]; then
+if [[ "$OSTYPE" == "darwin"* ]] && [[ "$(uname -m)" == "arm64" ]]; then
     "${parent_path}/../dist/apple/nr" "$@"
-elif [[ "$OSTYPE" == "cygwin" ]]; then
-    "${parent_path}/../dist/linux/nr" "$@"
 elif [[ "$OSTYPE" == "msys" ]]; then
     "${parent_path}/../dist/windows/nr.exe" "$@"
+else
+    "${parent_path}/../dist/linux/nr" "$@" 
 fi
