@@ -17,6 +17,7 @@
     "nrm": "npm/bin/nrm"
   },
   "scripts": {
+    "prepare": "husky install",
     "init:dist": "mkdir npm/dist/linux && mkdir npm/dist/windows && mkdir npm/dist/apple",
     "compile": "./cross-build.sh",
     "cp:build:linux": "cp target/x86_64-unknown-linux-gnu/release/na target/x86_64-unknown-linux-gnu/release/ni target/x86_64-unknown-linux-gnu/release/nr target/x86_64-unknown-linux-gnu/release/nrm npm/dist/linux",
@@ -25,7 +26,13 @@
     "cp:build": "pnpm cp:build:linux && pnpm cp:build:windows && pnpm cp:build:apple",
     "build": "pnpm compile && pnpm cp:build",
     "link:local": "cd npm && bun link",
-    "compile:old": "cargo build --workspace --bins -r && cp target/release/na target/release/ni target/release/nr target/release/nrm npm/dist"
+    "compile:old": "cargo build --workspace --bins -r && cp target/release/na target/release/ni target/release/nr target/release/nrm npm/dist",
+    "commitlint": "commitlint --edit"
+  },
+  "optionalDependencies": {
+    "@commitlint/cli": "^19.2.1",
+    "@commitlint/config-conventional": "^19.1.0",
+    "husky": "^9.0.11"
   },
   "workspaces": [
     "npm"
