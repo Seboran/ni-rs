@@ -1,6 +1,6 @@
 {
   "name": "@seboran/ni-x86-linux",
-  "version": "0.0.1",
+  "version": "0.5.3",
   "description": "",
   "main": "index.js",
   "scripts": {

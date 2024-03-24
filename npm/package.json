@@ -9,6 +9,7 @@
     "bin"
   ],
   "scripts": {
-    "postinstall": "./bin/install.sh"
+    "postinstall": "./bin/install.sh",
+    "bump": "pnpm -r exec npm version from-git --no-git-tag-version && pnpm exec npm version from-git --no-git-tag-version"
   }
 }
