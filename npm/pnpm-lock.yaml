@@ -1,0 +1,15 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .: {}
+
+  aarch64-apple-darwin: {}
+
+  x86_64-apple-darwin: {}
+
+  x86_64-unknown-linux-gnu: {}

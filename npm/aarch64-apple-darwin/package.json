@@ -1,0 +1,12 @@
+{
+  "name": "@seboran/ni-arm64-macos",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "files": [
+    "dist",
+    "bin"
+  ]
+}

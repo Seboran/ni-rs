@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
-if [[ "$OSTYPE" == "darwin"* ]] && [[ "$(uname -m)" == "arm64" ]]; then
-    "${parent_path}/../dist/apple/ni" "$@"
-elif [[ "$OSTYPE" == "msys" ]]; then
-    "${parent_path}/../dist/windows/ni.exe" "$@"
-else
-    "${parent_path}/../dist/linux/ni" "$@" 
-fi

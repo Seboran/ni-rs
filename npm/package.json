@@ -1,10 +1,14 @@
 {
   "name": "@seboran/ni",
   "type": "module",
+  "version": "0.5.3",
   "repository": {
     "url": "https://github.com/Seboran/ni-rs"
   },
   "files": [
-    "dist"
-  ]
+    "bin"
+  ],
+  "scripts": {
+    "postinstall": "./bin/install.sh"
+  }
 }
