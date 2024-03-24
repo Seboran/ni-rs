@@ -1,7 +1,0 @@
-on:
-  push:
-    tags:
-      - "*"
-
-name: release-builds
-
