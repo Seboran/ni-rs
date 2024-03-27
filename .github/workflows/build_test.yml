@@ -27,4 +27,4 @@ jobs:
         version: 8
     - name: Build
       working-directory: ./npm
-      run: pnpm i
+      run: pnpm i --ignore-scripts
