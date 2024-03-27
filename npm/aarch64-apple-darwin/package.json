@@ -8,5 +8,7 @@
   "files": [
     "dist",
     "bin"
-  ]
+  ],
+  "os": ["darwin"],
+  "cpu": ["arm64"]
 }

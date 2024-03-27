@@ -6,7 +6,17 @@ settings:
 
 importers:
 
-  .: {}
+  .:
+    optionalDependencies:
+      '@seboran/ni-arm64-macos':
+        specifier: workspace:*
+        version: link:aarch64-apple-darwin
+      '@seboran/ni-x86-linux':
+        specifier: workspace:*
+        version: link:x86_64-unknown-linux-gnu
+      '@seboran/ni-x86-macos':
+        specifier: workspace:*
+        version: link:x86_64-apple-darwin
 
   aarch64-apple-darwin: {}
 

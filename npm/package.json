@@ -5,11 +5,13 @@
   "repository": {
     "url": "https://github.com/Seboran/ni-rs"
   },
-  "files": [
-    "bin"
-  ],
   "scripts": {
-    "postinstall": "./bin/install.sh",
     "bump": "pnpm -r exec npm version from-git --no-git-tag-version && pnpm exec npm version from-git --no-git-tag-version"
+  },
+  "optionalDependencies": {
+    "@seboran/ni-arm64-macos": "workspace:*",
+    "@seboran/ni-x86-macos": "workspace:*",
+    "@seboran/ni-arm64-linux": "workspace:*",
+    "@seboran/ni-x86-linux": "workspace:*"
   }
 }
