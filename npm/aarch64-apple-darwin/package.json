@@ -1,6 +1,6 @@
 {
   "name": "@seboran/ni-arm64-macos",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "",
   "keywords": [],
   "author": "",
@@ -9,6 +9,10 @@
     "dist",
     "bin"
   ],
-  "os": ["darwin"],
-  "cpu": ["arm64"]
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "arm64"
+  ]
 }

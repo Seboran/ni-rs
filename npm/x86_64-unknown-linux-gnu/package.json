@@ -1,6 +1,6 @@
 {
   "name": "@seboran/ni-x86-linux",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,10 @@
     "dist",
     "bin"
   ],
-  "os": ["linux"],
-  "cpu": ["x86"]
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "x86"
+  ]
 }
